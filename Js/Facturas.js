@@ -92,10 +92,10 @@ function AgregarFactura() {
     contenType: "application/json",
     success: function (response) {
       console.log(response);
-      CargarFacturas();
+      window.location.reload();
     },
     error: function () {
-      alert("Error al intentar crear la factura :(");
+      alert("Error al intentar crear la factura");
     }
   });
   alert("Factura agregada exitosamente");
@@ -162,8 +162,8 @@ let ActualizarFactura = (IDFactura) => {
     dataType: "JSON",
     contenType: "application/json",
     success: function (response) {
-      console.log(response);
-      CargarFacturas(); 
+      console.log(response); 
+      window.location.reload();
     }
   });
   alert("Factura actualizada exitosamente");
